@@ -13,15 +13,14 @@ dotenv.config();
 
 //routes import
 const userRoutes = require('./routes/userRoutes')
-const blogRoutes = require('./routes/bloRoutes')
+const blogRoutes = require('./routes/blogRoutes')
+
 
 //mongoDB connection
 connectDB();
 
 //rest object
 const app= express();
-
-
 
 // middlewares
 app.use(cors())
@@ -33,10 +32,11 @@ app.use('/api/v1/user' , userRoutes)
 app.use('/api/v1/blog' , blogRoutes)
 
 
+
 //Port
-const PORT = process.env.PORT || 8081
+const PORT = process.env.PORT || 8080
 
 //listen
-app.listen(8081,()=>{
+app.listen(PORT,()=>{
     console.log(`Server running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan.white);
 })

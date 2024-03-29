@@ -19,6 +19,9 @@ const blogSchema = new mongoose.Schema(
       ref: "User",
       require: [true, "user id is required"],
     },
+    category:{
+      type:String,
+    }
   },
   { timestamps: true }
 );
@@ -26,3 +29,6 @@ const blogSchema = new mongoose.Schema(
 const blogModel = mongoose.model("Blog", blogSchema);
 
 module.exports = blogModel;
+
+
+

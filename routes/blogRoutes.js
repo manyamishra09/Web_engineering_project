@@ -31,3 +31,6 @@ router.delete("/delete-blog/:id", deleteBlogController);
 router.get("/user-blog/:id", userBlogControlller);
 
 module.exports = router;
+
+
+
